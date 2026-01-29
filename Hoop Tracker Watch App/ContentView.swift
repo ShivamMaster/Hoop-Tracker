@@ -3,7 +3,13 @@ import SwiftUI
 struct ContentView: View {
     @StateObject private var viewModel = GameViewModel()
     @State private var showingPointSelection = false
-    @State private var showingResetConfirmation = false
+    @State private var activeAlert: AlertType?
+    @State private var scrollAmount = 0.0
+
+    enum AlertType: Identifiable {
+        case reset, undo
+        var id: Self { self }
+    }
     
     var body: some View {
         VStack(spacing: 0) {
@@ -96,61 +102,49 @@ struct ContentView: View {
                 }
                 .padding(.horizontal)
                 
-                // MARK: - Bottom Actions (Reset & Undo)
-                HStack(spacing: 20) {
-                    // Reset Button
-                    Button(action: {
-                        showingResetConfirmation = true
-                    }) {
-                        HStack {
-                            Image(systemName: "arrow.counterclockwise")
-                            Text("Reset")
-                        }
-                        .font(.caption)
-                        .foregroundColor(.red)
-                        .padding(.vertical, 6)
-                        .padding(.horizontal, 12)
-                        .background(Color.red.opacity(0.2))
-                        .cornerRadius(8)
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    .alert(isPresented: $showingResetConfirmation) {
-                        Alert(
-                            title: Text("Reset Stats?"),
-                            message: Text("This will clear all your points and percentages."),
-                            primaryButton: .destructive(Text("Reset")) {
-                                viewModel.resetStats()
-                            },
-                            secondaryButton: .cancel()
-                        )
-                    }
-                    
-                    // Undo Button
-                    Button(action: {
-                        withAnimation {
-                            viewModel.undoLastAction()
-                        }
-                    }) {
-                        HStack {
-                            Image(systemName: "arrow.uturn.backward")
-                            Text("Undo")
-                        }
-                        .font(.caption)
-                        .foregroundColor(.blue)
-                        .padding(.vertical, 6)
-                        .padding(.horizontal, 12)
-                        .background(Color.blue.opacity(0.2))
-                        .cornerRadius(8)
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    .disabled(viewModel.actionHistory.isEmpty)
-                    .opacity(viewModel.actionHistory.isEmpty ? 0.5 : 1.0)
-                }
+
             }
-            .padding(.bottom, 5)
+            .padding(.bottom, 13)
             .background(Color.black.opacity(0.5)) // Slight scrim behind stats
         }
         .edgesIgnoringSafeArea(.bottom)
+        .focusable()
+        .digitalCrownRotation($scrollAmount)
+        .onChange(of: scrollAmount) { newValue in
+            if newValue > 20.0 {
+                // Scroll UP -> RESET Confirmation
+                activeAlert = .reset
+                scrollAmount = 0
+            } else if newValue < -20.0 {
+                // Scroll DOWN -> UNDO Confirmation
+                activeAlert = .undo
+                scrollAmount = 0
+            }
+        }
+        .alert(item: $activeAlert) { alertType in
+            switch alertType {
+            case .reset:
+                return Alert(
+                    title: Text("Reset Stats?"),
+                    message: Text("This will clear all your points and percentages."),
+                    primaryButton: .destructive(Text("Reset")) {
+                        viewModel.resetStats()
+                    },
+                    secondaryButton: .cancel()
+                )
+            case .undo:
+                return Alert(
+                    title: Text("Undo Last Action?"),
+                    message: Text("Are you sure you want to undo the last action?"),
+                    primaryButton: .default(Text("Undo")) {
+                        withAnimation {
+                            viewModel.undoLastAction()
+                        }
+                    },
+                    secondaryButton: .cancel()
+                )
+            }
+        }
     }
 }
 

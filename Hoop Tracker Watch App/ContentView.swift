@@ -102,49 +102,9 @@ struct ContentView: View {
                 }
                 .padding(.horizontal)
                 
-                // MARK: - Bottom Actions (Reset & Undo)
-                HStack(spacing: 20) {
-                    // Reset Button
-                    Button(action: {
-                        activeAlert = .reset
-                    }) {
-                        HStack {
-                            Image(systemName: "arrow.counterclockwise")
-                            Text("Reset")
-                        }
-                        .font(.caption)
-                        .foregroundColor(.red)
-                        .padding(.vertical, 6)
-                        .padding(.horizontal, 12)
-                        .background(Color.red.opacity(0.2))
-                        .cornerRadius(8)
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    .buttonStyle(PlainButtonStyle())
-                    
-                    // Undo Button
-                    Button(action: {
-                        withAnimation {
-                            viewModel.undoLastAction()
-                        }
-                    }) {
-                        HStack {
-                            Image(systemName: "arrow.uturn.backward")
-                            Text("Undo")
-                        }
-                        .font(.caption)
-                        .foregroundColor(.blue)
-                        .padding(.vertical, 6)
-                        .padding(.horizontal, 12)
-                        .background(Color.blue.opacity(0.2))
-                        .cornerRadius(8)
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    .disabled(viewModel.actionHistory.isEmpty)
-                    .opacity(viewModel.actionHistory.isEmpty ? 0.5 : 1.0)
-                }
+
             }
-            .padding(.bottom, 5)
+            .padding(.bottom, 13)
             .background(Color.black.opacity(0.5)) // Slight scrim behind stats
         }
         .edgesIgnoringSafeArea(.bottom)

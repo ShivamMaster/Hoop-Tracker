@@ -12,102 +12,99 @@ struct ContentView: View {
     }
     
     var body: some View {
-        VStack(spacing: 0) {
-            // MARK: - Top Bar (Mode Toggle)
-            HStack {
-                Button(action: {
-                    withAnimation {
-                        viewModel.toggleGameMode()
+        NavigationStack {
+            VStack(spacing: 0) {
+                // MARK: - Main Controls
+                HStack(spacing: 12) {
+                    // MISS Button (-)
+                    Button(action: {
+                        viewModel.addMiss()
+                    }) {
+                        Image(systemName: "minus")
+                            .font(.system(size: 55, weight: .bold)) // Bigger icon
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .contentShape(Rectangle())
                     }
-                }) {
-                    Text(viewModel.gameMode.rawValue)
-                        .font(.headline)
-                        .fontWeight(.bold)
-                        .padding(.horizontal, 10)
-                        .padding(.vertical, 6)
-                        .background(Color.gray.opacity(0.3))
-                        .cornerRadius(8)
+                    .background(Color.red.opacity(0.8))
+                    .cornerRadius(25)
+                    
+                    // MAKE Button (+)
+                    Button(action: {
+                        showingPointSelection = true
+                    }) {
+                        Image(systemName: "plus")
+                            .font(.system(size: 55, weight: .bold)) // Bigger icon
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .contentShape(Rectangle())
+                    }
+                    .background(Color.green.opacity(0.8))
+                    .cornerRadius(25)
+                    .sheet(isPresented: $showingPointSelection) {
+                        PointSelectionView(viewModel: viewModel, isPresented: $showingPointSelection)
+                    }
                 }
-                .buttonStyle(PlainButtonStyle())
-                Spacer()
-            }
-            .padding(.horizontal, 12)
-            .padding(.top, 12)
-            
-            // MARK: - Main Controls
-            HStack(spacing: 12) {
-                // MISS Button (-)
-                Button(action: {
-                    viewModel.addMiss()
-                }) {
-                    Image(systemName: "minus")
-                        .font(.system(size: 55, weight: .bold)) // Bigger icon
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .contentShape(Rectangle())
-                }
-                .background(Color.red.opacity(0.8))
-                .cornerRadius(25)
+                .frame(maxHeight: .infinity)
+                .padding(.horizontal, 8) // Reduced padding for bigger buttons
+                .padding(.vertical, 5)
                 
-                // MAKE Button (+)
-                Button(action: {
-                    showingPointSelection = true
-                }) {
-                    Image(systemName: "plus")
-                        .font(.system(size: 55, weight: .bold)) // Bigger icon
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .contentShape(Rectangle())
-                }
-                .background(Color.green.opacity(0.8))
-                .cornerRadius(25)
-                .sheet(isPresented: $showingPointSelection) {
-                    PointSelectionView(viewModel: viewModel, isPresented: $showingPointSelection)
-                }
-            }
-            .frame(maxHeight: .infinity)
-            .padding(.horizontal, 8) // Reduced padding for bigger buttons
-            .padding(.vertical, 5)
-            
-            // MARK: - Stats Dashboard
-            VStack(spacing: 8) {
-                HStack {
-                    VStack {
-                        Text("\(viewModel.totalPoints)")
-                            .font(.title2)
-                            .fontWeight(.heavy)
-                            .foregroundColor(.yellow)
-                        Text("PTS")
-                            .font(.system(size: 10))
-                            .foregroundColor(.gray)
+                // MARK: - Stats Dashboard
+                VStack(spacing: 8) {
+                    HStack {
+                        VStack {
+                            Text("\(viewModel.totalPoints)")
+                                .font(.title2)
+                                .fontWeight(.heavy)
+                                .foregroundColor(.yellow)
+                            Text("PTS")
+                                .font(.system(size: 10))
+                                .foregroundColor(.gray)
+                        }
+                        
+                        Spacer()
+                        
+                        VStack {
+                            Text("\(viewModel.madeShots)/\(viewModel.totalAttempts)")
+                                .font(.headline)
+                            Text("M/A")
+                                .font(.system(size: 10))
+                                .foregroundColor(.gray)
+                        }
+                        
+                        Spacer()
+                        
+                        VStack {
+                            Text(viewModel.formattedPercentage)
+                                .font(.headline)
+                            Text("%")
+                                .font(.system(size: 10))
+                                .foregroundColor(.gray)
+                        }
                     }
+                    .padding(.horizontal)
                     
-                    Spacer()
-                    
-                    VStack {
-                        Text("\(viewModel.madeShots)/\(viewModel.totalAttempts)")
-                            .font(.headline)
-                        Text("M/A")
-                            .font(.system(size: 10))
-                            .foregroundColor(.gray)
-                    }
-                    
-                    Spacer()
-                    
-                    VStack {
-                        Text(viewModel.formattedPercentage)
-                            .font(.headline)
-                        Text("%")
-                            .font(.system(size: 10))
-                            .foregroundColor(.gray)
-                    }
-                }
-                .padding(.horizontal)
-                
 
+                }
+                .padding(.bottom, 17)
+                .background(Color.black.opacity(0.5)) // Slight scrim behind stats
             }
-            .padding(.bottom, 17)
-            .background(Color.black.opacity(0.5)) // Slight scrim behind stats
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button(action: {
+                        viewModel.toggleGameMode()
+                    }) {
+                        Text(viewModel.gameMode.rawValue)
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 4)
+                            .background(Color.gray.opacity(0.3))
+                            .cornerRadius(6)
+                    }
+                    .buttonStyle(.plain)
+                }
+            }
+            .ignoresSafeArea(.container, edges: .bottom)
         }
-        .ignoresSafeArea(.container, edges: [.top, .bottom])
         .focusable()
         .digitalCrownRotation($scrollAmount)
         .onChange(of: scrollAmount) { newValue in

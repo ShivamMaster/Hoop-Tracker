@@ -61,23 +61,48 @@ class GameViewModel: ObservableObject {
         gameMode == .oneAndTwo ? 2 : 3
     }
     
+    // MARK: - Action History
+    enum Action {
+        case make(points: Int)
+        case miss
+    }
+    
+    @Published var actionHistory: [Action] = []
+    
     // MARK: - Methods
     
     func addMake(points: Int) {
         totalPoints += points
         madeShots += 1
+        actionHistory.append(.make(points: points))
         triggerHaptic(.success)
     }
     
     func addMiss() {
         missedShots += 1
+        actionHistory.append(.miss)
         triggerHaptic(.failure)
+    }
+    
+    func undoLastAction() {
+        guard let lastAction = actionHistory.popLast() else { return }
+        
+        switch lastAction {
+        case .make(let points):
+            totalPoints -= points
+            madeShots -= 1
+        case .miss:
+            missedShots -= 1
+        }
+        
+        triggerHaptic(.directionDown)
     }
     
     func resetStats() {
         totalPoints = 0
         madeShots = 0
         missedShots = 0
+        actionHistory.removeAll()
         triggerHaptic(.retry)
     }
     

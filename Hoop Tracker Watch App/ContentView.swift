@@ -4,6 +4,7 @@ struct ContentView: View {
     @StateObject private var viewModel = GameViewModel()
     @State private var showingPointSelection = false
     @State private var showingResetConfirmation = false
+    @State private var scrollAmount = 0.0
     
     var body: some View {
         VStack(spacing: 0) {
@@ -151,6 +152,22 @@ struct ContentView: View {
             .background(Color.black.opacity(0.5)) // Slight scrim behind stats
         }
         .edgesIgnoringSafeArea(.bottom)
+        .focusable()
+        .digitalCrownRotation($scrollAmount)
+        .onChange(of: scrollAmount) { newValue in
+            if newValue > 5.0 {
+                // Scroll UP -> REDO (or Undo in this specific request mapping: "scrolling up will undo")
+                // User asked: "scrolling up will undo"
+                withAnimation {
+                    viewModel.undoLastAction()
+                }
+                scrollAmount = 0
+            } else if newValue < -5.0 {
+                // Scroll DOWN -> RESET
+                showingResetConfirmation = true
+                scrollAmount = 0
+            }
+        }
     }
 }
 

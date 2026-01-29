@@ -3,8 +3,13 @@ import SwiftUI
 struct ContentView: View {
     @StateObject private var viewModel = GameViewModel()
     @State private var showingPointSelection = false
-    @State private var showingResetConfirmation = false
+    @State private var activeAlert: AlertType?
     @State private var scrollAmount = 0.0
+
+    enum AlertType: Identifiable {
+        case reset, undo
+        var id: Self { self }
+    }
     
     var body: some View {
         VStack(spacing: 0) {
@@ -101,7 +106,7 @@ struct ContentView: View {
                 HStack(spacing: 20) {
                     // Reset Button
                     Button(action: {
-                        showingResetConfirmation = true
+                        activeAlert = .reset
                     }) {
                         HStack {
                             Image(systemName: "arrow.counterclockwise")
@@ -115,16 +120,7 @@ struct ContentView: View {
                         .cornerRadius(8)
                     }
                     .buttonStyle(PlainButtonStyle())
-                    .alert(isPresented: $showingResetConfirmation) {
-                        Alert(
-                            title: Text("Reset Stats?"),
-                            message: Text("This will clear all your points and percentages."),
-                            primaryButton: .destructive(Text("Reset")) {
-                                viewModel.resetStats()
-                            },
-                            secondaryButton: .cancel()
-                        )
-                    }
+                    .buttonStyle(PlainButtonStyle())
                     
                     // Undo Button
                     Button(action: {
@@ -155,17 +151,38 @@ struct ContentView: View {
         .focusable()
         .digitalCrownRotation($scrollAmount)
         .onChange(of: scrollAmount) { newValue in
-            if newValue > 5.0 {
-                // Scroll UP -> REDO (or Undo in this specific request mapping: "scrolling up will undo")
-                // User asked: "scrolling up will undo"
-                withAnimation {
-                    viewModel.undoLastAction()
-                }
+            if newValue > 20.0 {
+                // Scroll UP -> RESET Confirmation
+                activeAlert = .reset
                 scrollAmount = 0
-            } else if newValue < -5.0 {
-                // Scroll DOWN -> RESET
-                showingResetConfirmation = true
+            } else if newValue < -20.0 {
+                // Scroll DOWN -> UNDO Confirmation
+                activeAlert = .undo
                 scrollAmount = 0
+            }
+        }
+        .alert(item: $activeAlert) { alertType in
+            switch alertType {
+            case .reset:
+                return Alert(
+                    title: Text("Reset Stats?"),
+                    message: Text("This will clear all your points and percentages."),
+                    primaryButton: .destructive(Text("Reset")) {
+                        viewModel.resetStats()
+                    },
+                    secondaryButton: .cancel()
+                )
+            case .undo:
+                return Alert(
+                    title: Text("Undo Last Action?"),
+                    message: Text("Are you sure you want to undo the last action?"),
+                    primaryButton: .default(Text("Undo")) {
+                        withAnimation {
+                            viewModel.undoLastAction()
+                        }
+                    },
+                    secondaryButton: .cancel()
+                )
             }
         }
     }

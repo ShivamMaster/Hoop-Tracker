@@ -1,0 +1,699 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D4E448992F2B9D68007E7D30 /* Hoop Tracker Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D4E448982F2B9D68007E7D30 /* Hoop Tracker Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D4E4489A2F2B9D68007E7D30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4E4488C2F2B9D68007E7D30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4E448972F2B9D68007E7D30;
+			remoteInfo = "Hoop Tracker Watch App";
+		};
+		D4E448A82F2B9D6A007E7D30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4E4488C2F2B9D68007E7D30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4E448972F2B9D68007E7D30;
+			remoteInfo = "Hoop Tracker Watch App";
+		};
+		D4E448B22F2B9D6A007E7D30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4E4488C2F2B9D68007E7D30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4E448972F2B9D68007E7D30;
+			remoteInfo = "Hoop Tracker Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D4E448BE2F2B9D6A007E7D30 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				D4E448992F2B9D68007E7D30 /* Hoop Tracker Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D4E448922F2B9D68007E7D30 /* Hoop Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hoop Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4E448982F2B9D68007E7D30 /* Hoop Tracker Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hoop Tracker Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4E448A72F2B9D6A007E7D30 /* Hoop Tracker Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hoop Tracker Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4E448B12F2B9D6A007E7D30 /* Hoop Tracker Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hoop Tracker Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		D4E4489C2F2B9D68007E7D30 /* Hoop Tracker Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Hoop Tracker Watch App";
+			sourceTree = "<group>";
+		};
+		D4E448AA2F2B9D6A007E7D30 /* Hoop Tracker Watch AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Hoop Tracker Watch AppTests";
+			sourceTree = "<group>";
+		};
+		D4E448B42F2B9D6A007E7D30 /* Hoop Tracker Watch AppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Hoop Tracker Watch AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4E448952F2B9D68007E7D30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4E448A42F2B9D6A007E7D30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4E448AE2F2B9D6A007E7D30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D4E4488B2F2B9D68007E7D30 = {
+			isa = PBXGroup;
+			children = (
+				D4E4489C2F2B9D68007E7D30 /* Hoop Tracker Watch App */,
+				D4E448AA2F2B9D6A007E7D30 /* Hoop Tracker Watch AppTests */,
+				D4E448B42F2B9D6A007E7D30 /* Hoop Tracker Watch AppUITests */,
+				D4E448932F2B9D68007E7D30 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D4E448932F2B9D68007E7D30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4E448922F2B9D68007E7D30 /* Hoop Tracker.app */,
+				D4E448982F2B9D68007E7D30 /* Hoop Tracker Watch App.app */,
+				D4E448A72F2B9D6A007E7D30 /* Hoop Tracker Watch AppTests.xctest */,
+				D4E448B12F2B9D6A007E7D30 /* Hoop Tracker Watch AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4E448912F2B9D68007E7D30 /* Hoop Tracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4E448BF2F2B9D6A007E7D30 /* Build configuration list for PBXNativeTarget "Hoop Tracker" */;
+			buildPhases = (
+				D4E448902F2B9D68007E7D30 /* Resources */,
+				D4E448BE2F2B9D6A007E7D30 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4E4489B2F2B9D68007E7D30 /* PBXTargetDependency */,
+			);
+			name = "Hoop Tracker";
+			packageProductDependencies = (
+			);
+			productName = "Hoop Tracker";
+			productReference = D4E448922F2B9D68007E7D30 /* Hoop Tracker.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		D4E448972F2B9D68007E7D30 /* Hoop Tracker Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4E448BB2F2B9D6A007E7D30 /* Build configuration list for PBXNativeTarget "Hoop Tracker Watch App" */;
+			buildPhases = (
+				D4E448942F2B9D68007E7D30 /* Sources */,
+				D4E448952F2B9D68007E7D30 /* Frameworks */,
+				D4E448962F2B9D68007E7D30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				D4E4489C2F2B9D68007E7D30 /* Hoop Tracker Watch App */,
+			);
+			name = "Hoop Tracker Watch App";
+			packageProductDependencies = (
+			);
+			productName = "Hoop Tracker Watch App";
+			productReference = D4E448982F2B9D68007E7D30 /* Hoop Tracker Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D4E448A62F2B9D6A007E7D30 /* Hoop Tracker Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4E448C22F2B9D6A007E7D30 /* Build configuration list for PBXNativeTarget "Hoop Tracker Watch AppTests" */;
+			buildPhases = (
+				D4E448A32F2B9D6A007E7D30 /* Sources */,
+				D4E448A42F2B9D6A007E7D30 /* Frameworks */,
+				D4E448A52F2B9D6A007E7D30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4E448A92F2B9D6A007E7D30 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D4E448AA2F2B9D6A007E7D30 /* Hoop Tracker Watch AppTests */,
+			);
+			name = "Hoop Tracker Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "Hoop Tracker Watch AppTests";
+			productReference = D4E448A72F2B9D6A007E7D30 /* Hoop Tracker Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D4E448B02F2B9D6A007E7D30 /* Hoop Tracker Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4E448C52F2B9D6A007E7D30 /* Build configuration list for PBXNativeTarget "Hoop Tracker Watch AppUITests" */;
+			buildPhases = (
+				D4E448AD2F2B9D6A007E7D30 /* Sources */,
+				D4E448AE2F2B9D6A007E7D30 /* Frameworks */,
+				D4E448AF2F2B9D6A007E7D30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4E448B32F2B9D6A007E7D30 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D4E448B42F2B9D6A007E7D30 /* Hoop Tracker Watch AppUITests */,
+			);
+			name = "Hoop Tracker Watch AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "Hoop Tracker Watch AppUITests";
+			productReference = D4E448B12F2B9D6A007E7D30 /* Hoop Tracker Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4E4488C2F2B9D68007E7D30 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2610;
+				LastUpgradeCheck = 2610;
+				TargetAttributes = {
+					D4E448912F2B9D68007E7D30 = {
+						CreatedOnToolsVersion = 26.1.1;
+					};
+					D4E448972F2B9D68007E7D30 = {
+						CreatedOnToolsVersion = 26.1.1;
+						LastSwiftMigration = 2610;
+					};
+					D4E448A62F2B9D6A007E7D30 = {
+						CreatedOnToolsVersion = 26.1.1;
+						TestTargetID = D4E448972F2B9D68007E7D30;
+					};
+					D4E448B02F2B9D6A007E7D30 = {
+						CreatedOnToolsVersion = 26.1.1;
+						TestTargetID = D4E448972F2B9D68007E7D30;
+					};
+				};
+			};
+			buildConfigurationList = D4E4488F2F2B9D68007E7D30 /* Build configuration list for PBXProject "Hoop Tracker" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4E4488B2F2B9D68007E7D30;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D4E448932F2B9D68007E7D30 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4E448912F2B9D68007E7D30 /* Hoop Tracker */,
+				D4E448972F2B9D68007E7D30 /* Hoop Tracker Watch App */,
+				D4E448A62F2B9D6A007E7D30 /* Hoop Tracker Watch AppTests */,
+				D4E448B02F2B9D6A007E7D30 /* Hoop Tracker Watch AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4E448902F2B9D68007E7D30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4E448962F2B9D68007E7D30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4E448A52F2B9D6A007E7D30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4E448AF2F2B9D6A007E7D30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4E448942F2B9D68007E7D30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4E448A32F2B9D6A007E7D30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4E448AD2F2B9D6A007E7D30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D4E4489B2F2B9D68007E7D30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4E448972F2B9D68007E7D30 /* Hoop Tracker Watch App */;
+			targetProxy = D4E4489A2F2B9D68007E7D30 /* PBXContainerItemProxy */;
+		};
+		D4E448A92F2B9D6A007E7D30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4E448972F2B9D68007E7D30 /* Hoop Tracker Watch App */;
+			targetProxy = D4E448A82F2B9D6A007E7D30 /* PBXContainerItemProxy */;
+		};
+		D4E448B32F2B9D6A007E7D30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4E448972F2B9D68007E7D30 /* Hoop Tracker Watch App */;
+			targetProxy = D4E448B22F2B9D6A007E7D30 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D4E448B92F2B9D6A007E7D30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 7VJZ58KYD5;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D4E448BA2F2B9D6A007E7D30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7VJZ58KYD5;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		D4E448BC2F2B9D6A007E7D30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7VJZ58KYD5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Hoop Tracker";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Shivamgoel.Hoop-Tracker.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.1;
+			};
+			name = Debug;
+		};
+		D4E448BD2F2B9D6A007E7D30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7VJZ58KYD5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Hoop Tracker";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Shivamgoel.Hoop-Tracker.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.1;
+			};
+			name = Release;
+		};
+		D4E448C02F2B9D6A007E7D30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7VJZ58KYD5;
+				INFOPLIST_KEY_CFBundleDisplayName = "Hoop Tracker";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Shivamgoel.Hoop-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D4E448C12F2B9D6A007E7D30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7VJZ58KYD5;
+				INFOPLIST_KEY_CFBundleDisplayName = "Hoop Tracker";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Shivamgoel.Hoop-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4E448C32F2B9D6A007E7D30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7VJZ58KYD5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Shivamgoel.Hoop-Tracker-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hoop Tracker Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Hoop Tracker Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 26.1;
+			};
+			name = Debug;
+		};
+		D4E448C42F2B9D6A007E7D30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7VJZ58KYD5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Shivamgoel.Hoop-Tracker-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hoop Tracker Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Hoop Tracker Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.1;
+			};
+			name = Release;
+		};
+		D4E448C62F2B9D6A007E7D30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7VJZ58KYD5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Shivamgoel.Hoop-Tracker-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Hoop Tracker Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 26.1;
+			};
+			name = Debug;
+		};
+		D4E448C72F2B9D6A007E7D30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7VJZ58KYD5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Shivamgoel.Hoop-Tracker-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Hoop Tracker Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4E4488F2F2B9D68007E7D30 /* Build configuration list for PBXProject "Hoop Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4E448B92F2B9D6A007E7D30 /* Debug */,
+				D4E448BA2F2B9D6A007E7D30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4E448BB2F2B9D6A007E7D30 /* Build configuration list for PBXNativeTarget "Hoop Tracker Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4E448BC2F2B9D6A007E7D30 /* Debug */,
+				D4E448BD2F2B9D6A007E7D30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4E448BF2F2B9D6A007E7D30 /* Build configuration list for PBXNativeTarget "Hoop Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4E448C02F2B9D6A007E7D30 /* Debug */,
+				D4E448C12F2B9D6A007E7D30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4E448C22F2B9D6A007E7D30 /* Build configuration list for PBXNativeTarget "Hoop Tracker Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4E448C32F2B9D6A007E7D30 /* Debug */,
+				D4E448C42F2B9D6A007E7D30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4E448C52F2B9D6A007E7D30 /* Build configuration list for PBXNativeTarget "Hoop Tracker Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4E448C62F2B9D6A007E7D30 /* Debug */,
+				D4E448C72F2B9D6A007E7D30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4E4488C2F2B9D68007E7D30 /* Project object */;
+}

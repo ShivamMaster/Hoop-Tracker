@@ -7,7 +7,7 @@ enum GameMode: String, CaseIterable, Identifiable {
     case twoAndThree = "2s & 3s"
     
     var id: String { self.rawValue }
-}
+}   
 
 class GameViewModel: ObservableObject {
     // MARK: - Published Properties

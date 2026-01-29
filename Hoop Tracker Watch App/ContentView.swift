@@ -15,7 +15,6 @@ struct ContentView: View {
         VStack(spacing: 0) {
             // MARK: - Top Bar (Mode Toggle)
             HStack {
-                Spacer()
                 Button(action: {
                     withAnimation {
                         viewModel.toggleGameMode()
@@ -24,15 +23,16 @@ struct ContentView: View {
                     Text(viewModel.gameMode.rawValue)
                         .font(.headline)
                         .fontWeight(.bold)
-                        .padding(.horizontal, 12)
-                        .padding(.vertical, 8)
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 6)
                         .background(Color.gray.opacity(0.3))
                         .cornerRadius(8)
                 }
                 .buttonStyle(PlainButtonStyle())
+                Spacer()
             }
-            .padding(.top, 5)
-            .padding(.horizontal)
+            .padding(.horizontal, 12)
+            .padding(.top, 12)
             
             // MARK: - Main Controls
             HStack(spacing: 12) {
@@ -41,7 +41,7 @@ struct ContentView: View {
                     viewModel.addMiss()
                 }) {
                     Image(systemName: "minus")
-                        .font(.system(size: 50, weight: .bold)) // Bigger icon
+                        .font(.system(size: 55, weight: .bold)) // Bigger icon
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .contentShape(Rectangle())
                 }
@@ -53,7 +53,7 @@ struct ContentView: View {
                     showingPointSelection = true
                 }) {
                     Image(systemName: "plus")
-                        .font(.system(size: 50, weight: .bold)) // Bigger icon
+                        .font(.system(size: 55, weight: .bold)) // Bigger icon
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .contentShape(Rectangle())
                 }
@@ -104,10 +104,10 @@ struct ContentView: View {
                 
 
             }
-            .padding(.bottom, 13)
+            .padding(.bottom, 17)
             .background(Color.black.opacity(0.5)) // Slight scrim behind stats
         }
-        .edgesIgnoringSafeArea(.bottom)
+        .ignoresSafeArea(.container, edges: [.top, .bottom])
         .focusable()
         .digitalCrownRotation($scrollAmount)
         .onChange(of: scrollAmount) { newValue in
